@@ -1,0 +1,196 @@
+/* Restore default block layout for key elements */
+h1, p, nav, section, footer, header {
+  display: block;
+}
+
+body {
+  font-family: monospace, "Courier New", monospace;
+  font-size: 1.05rem; /* was 1rem */
+  background: #fff;
+  color: #000;
+  max-width: 750px;
+  margin: 60px auto;
+  padding: 0 25px;
+  line-height: 1.5;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Big visible site title */
+#site-title {
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 20px 0 10px 0;
+  text-align: center; /* center the title */
+}
+
+/* Dark mode */
+.dark-mode body {
+  background: #111;
+  color: #eee;
+}
+.dark-mode a {
+  color: #fffc8c;
+}
+.dark-mode h2 {
+  color: #fff; /* or keep default if already handled globally */
+}
+
+
+/* Links */
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-decoration-style: solid;
+}
+a:hover {
+  text-decoration-style: wavy;
+}
+
+/* Navigation */
+header nav p {
+  margin: 0.25em 0 1.5em 0;
+  font-size: 0.9rem;
+  text-align: center; /* center nav text */
+
+}
+
+/* Section headers */
+h2 {
+  margin: 1.5em 0 0.25em 0;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #222; /* darker for more presence */
+}
+.dark-mode h2 {
+  color: #f2f2f2;
+}
+
+/* Terminal-style list */
+ul.terminal-style {
+  font-family: monospace;
+  white-space: pre;
+  margin: 0;
+  padding-left: 1em;
+  list-style: none;
+}
+ul.terminal-style li::before {
+  content: "> ";
+  color: inherit;
+}
+ul.terminal-style li a {
+  text-decoration: none;
+  color: inherit;
+}
+ul.terminal-style li a:hover {
+  text-decoration: underline wavy;
+}
+
+/* Dark mode toggle */
+#toggle-dark {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 6px 10px;
+  background: none;
+  border: 1px solid currentColor;
+  font-family: inherit;
+  font-size: 0.85em;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  text-align: right;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+footer a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline wavy;
+}
+#about-blurb {
+  font-size: 0.95rem;
+  margin: 0.25em auto 1em auto;
+  text-align: center;
+  max-width: 90%;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3em;
+}
+.grid-layout section {
+  min-width: 0;
+}
+ul.terminal-style li {
+  margin-bottom: 0.5em; /* reduce spacing between items */
+}
+
+main {
+  max-width: 650px;
+  margin: 80px auto;
+  padding: 0 25px;
+}
+.meta {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 1.5em;
+}
+
+.nav-links {
+  margin-top: 2em;
+  font-size: 0.95rem;
+}
+.nav-links a {
+  text-decoration: none;
+}
+.nav-links a:hover {
+  text-decoration: underline wavy;
+}
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.project-list li {
+  margin-bottom: 0.4em;
+}
+
+.project-list a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  line-height: 1.3;
+}
+
+.project-list .arrow {
+  display: inline;
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+
+.project-list .title {
+  font-weight: 500;
+}
+
+.project-list .desc {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-left: 1.7em; 
+}
