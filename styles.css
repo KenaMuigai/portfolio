@@ -59,13 +59,14 @@ header nav p {
 
 /* Section headers */
 h2 {
-  margin: 1.5em 0 0.25em 0;
-  font-weight: bold;
   font-size: 1.25rem;
-  color: #222; /* darker for more presence */
+  font-weight: bold;
+  color: #222;
+  text-transform: lowercase;
+  margin-bottom: 0.6em;
 }
 .dark-mode h2 {
-  color: #f2f2f2;
+  color: #fff;
 }
 
 /* Terminal-style list */
@@ -193,4 +194,37 @@ main {
   font-size: 0.85rem;
   opacity: 0.75;
   margin-left: 1.7em; 
+}
+
+#tree-canvas {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  pointer-events: none;
+  width: 150px;
+  height: 150px;
+}
+
+.clean-section {
+  margin: 3em 0;
+}
+
+.clean-section p,
+.clean-section li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.clean-section ul {
+  padding-left: 1.2em;
+  list-style: none;
+}
+
+.clean-section li::before {
+  content: "› ";
+  display: inline-block;
+  margin-right: 0.4em;
+  opacity: 0.6;
 }
